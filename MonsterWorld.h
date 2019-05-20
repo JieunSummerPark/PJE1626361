@@ -2,7 +2,7 @@
 #include "Canvas.h"
 #include "Monster.h"
 #include <windows.h>
-#define DIM  40
+#define DIM 40
 #define MAXMONS 5
 
 class MonsterWorld {
