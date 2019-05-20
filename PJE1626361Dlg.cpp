@@ -11,6 +11,10 @@
 // P291 6.8 Hangman 게임
 #include "Hangman.h"
 
+// P339 7.8 MonsterWorld
+#include "MonsterWorld.h"
+#include <time.h>
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -69,6 +73,7 @@ BEGIN_MESSAGE_MAP(CPJE1626361Dlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CPJE1626361Dlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CPJE1626361Dlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -164,4 +169,21 @@ void CPJE1626361Dlg::OnBnClickedButton1()
 	// P291 프로그램 6.10 - 행맨 게임 메인 함수
 	Hangman game;
 	game.play("galaxy");
+}
+
+
+void CPJE1626361Dlg::OnBnClickedButton2()
+{
+	// P339 프로그램 7.13 - 몬스터 월드 메인함수
+	srand((unsigned int)time(NULL));
+	int w = 16, h = 8;
+
+	MonsterWorld game(w, h);
+	Monster m("몬스터", "※", rand() % w, rand() % h);
+	game.add(m);
+	game.add(Monster("도깨비", "◎", rand() % w, rand() % h));
+	game.add(Monster("별그대", "★", rand() % w, rand() % h));
+	game.add(Monster("고스트", "♥", rand() % w, rand() % h));
+	game.play(500, 10);
+	printf("------게임 종료-------------------\n");
 }

@@ -187,8 +187,11 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Canvas.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Hangman.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MonsterWorld.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PJE1626361.h" />
     <ClInclude Include="PJE1626361Dlg.h" />

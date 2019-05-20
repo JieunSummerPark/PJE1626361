@@ -36,6 +36,15 @@
     <ClInclude Include="Hangman.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Canvas.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterWorld.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PJE1626361.cpp">
